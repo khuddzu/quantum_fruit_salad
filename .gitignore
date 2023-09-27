@@ -1,0 +1,6 @@
+# Ignore all files in the "build" directory
+build/
+
+# Ignore Python package metadata
+*.egg-info/
+
