@@ -1,9 +1,0 @@
-README.md
-setup.py
-quantum_fruit_salad/__init__.py
-quantum_fruit_salad/test.py
-quantum_fruit_salad.egg-info/PKG-INFO
-quantum_fruit_salad.egg-info/SOURCES.txt
-quantum_fruit_salad.egg-info/dependency_links.txt
-quantum_fruit_salad.egg-info/requires.txt
-quantum_fruit_salad.egg-info/top_level.txt
