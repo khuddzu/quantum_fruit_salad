@@ -1,5 +1,5 @@
 # quantum_fruit_salad
- <img src="https://ih1.redbubble.net/image.3047863206.6446/raf,750x1000,075,t,101010:01c5ca27c6.jpg" alt="Thumbnail" width="100" height="100">
+ <img src="https://ih1.redbubble.net/image.3047863206.6446/raf,750x1000,075,t,101010:01c5ca27c6.jpg" alt="Thumbnail" width="300" height="300">
 </a>
 
 This repository serves as an archival collection of code artifacts from my graduate student journey, encompassing a diverse range of projects and experiments. From computational chemistry scripts to machine learning prototypes and data analysis utilities, it houses the culmination of my coding endeavors during this period.
