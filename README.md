@@ -1,5 +1,4 @@
 # quantum_fruit_salad
->>>>>>> 328f894d7f8a8682afaa3c2e13fbea81dd1784c9
 
 This repository serves as an archival collection of code artifacts from my graduate student journey, encompassing a diverse range of projects and experiments. From computational chemistry scripts to machine learning prototypes and data analysis utilities, it houses the culmination of my coding endeavors during this period.
 
