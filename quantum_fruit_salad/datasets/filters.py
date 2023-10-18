@@ -22,10 +22,14 @@ def sort_data_by_xcoord(data):
     coordinates = torch.tensor(data['coordinates'][:])
     indices = coordinates[:, :, 0].sort()[1]
     new_data = {}
+    criteria_shape = coordinates.shape[1]
     for key in data:
         prop = torch.tensor(data[key][:])
         if len(prop.shape) > 1:
-            new_prop = prop[torch.arange(prop.size(0)).unsqueeze(1), indices]
+            if prop.shape[1] == criteria_shape:
+                new_prop = prop[torch.arange(prop.size(0)).unsqueeze(1), indices]
+            else:
+                new_prop=prop
         else:
             new_prop=prop
         new_data[key]=new_prop
@@ -56,3 +60,18 @@ def unique(x, dim=None):
                         device=inverse.device)
     inverse, perm = inverse.flip([0]), perm.flip([0])
     return unique, inverse.new_empty(unique.size(0)).scatter_(0, inverse, perm)
+
+def high_force_magnitudes(data, 
+                            threshold):
+    for k,v in data.items():
+        if 'force' in k.lower():
+            if 'correction' in k.lower():
+                continue
+            elif 'noisy' in k.lower():
+                continue
+            else:
+                print(k)
+                forces = data[k][:]
+                norm = torch.Tensor((torch.Tensor(forces).norm(dim=-1) > threshold).any(dim=-1).nonzero().squeeze(1))
+                #if len(norm)>0:
+                #    print(norm)

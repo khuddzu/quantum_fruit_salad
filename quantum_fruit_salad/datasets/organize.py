@@ -26,4 +26,3 @@ def combine_h5(combined_file: str,
                 for key in f2.keys():
                     if key not in f1:
                         f2.copy(f2[key], out)
-            
